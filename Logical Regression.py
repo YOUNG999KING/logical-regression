@@ -20,9 +20,9 @@ def Cost(theta,X,y):    #cost function
     theta = np.matrix(theta)
     X = np.matrix(X)
     y = np.matrix(y)
-    first = np.multiply(-y, np.log(sigmoid(X * theta.T)))
-    second = np.multiply((1 - y), np.log(1 - sigmoid(X * theta.T)))
-    return np.sum(first - second) / (len(X))
+    e_1= np.multiply(-y, np.log(sigmoid(X * theta.T)))
+    e_2 = np.multiply((1 - y), np.log(1 - sigmoid(X * theta.T)))
+    return np.sum(e_1 - e_2) / (len(X))
 
 data.insert(0, 'Ones', 1)# h (x)= θ0+ θ1𝓧1+ θ2𝓧2 的一个常数项可以看成是θ0和1的乘积，其他项为θi和𝓧i的乘积
 
