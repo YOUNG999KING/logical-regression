@@ -9,7 +9,7 @@ Created on Sat Oct  1 22:08:34 2022
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-path = 'C://Users//HUAWEI//Desktop//predict.txt'
+path = 'C://Users//HUAWEI//Desktop//predict.txt'#you can set some random data,such as 57.123412,98.214216,1   ---first_one is exam_1,second is exam_2,0 is ill,vice versa， 1 is ill
 data = pd.read_csv(path,header=None,names=['exam1','exam2','ill'])
 Positi = data[data['ill'].isin([1])]
 Negati = data[data['ill'].isin([0])]
